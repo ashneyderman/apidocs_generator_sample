@@ -7,7 +7,7 @@ defmodule ApidocsGeneratorSample.SimpleController do
   This method is here to examplify multi-line
   description. Just to annoy you slightly.
 
-  @apiParam (Query Parameters) {String} dry_run Required parameter
+  @apiParam (Query Parameters) {Boolean} dry_run Required parameter
   @apiParam (Query Parameters) {String} [zip] Optional parameter
   @apiVersion 2.0.1
   """
