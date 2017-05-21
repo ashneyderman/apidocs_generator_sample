@@ -1,0 +1,7 @@
+{
+  "name": "Sample API",
+  "version": "2.0.0",
+  "description": "Sample API that demonstrates apidoc generator features",
+  "title": "Sample API",
+  "url" : "https://sample.com"
+}
