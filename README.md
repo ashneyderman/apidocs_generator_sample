@@ -5,14 +5,14 @@ To start your Phoenix app:
   * Install dependencies with `mix deps.get`
   * Start Phoenix endpoint with `mix phoenix.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+To generate test snippets and documentation
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+  * mix test
+  * mix docs --format=apidocs
+  * apidoc -i _build/apidocs -o _build/apidocs-html
+  
+You can then view html apidocs _build/apidocs-html/index.html
 
-## Learn more
+Note, apidoc is a javascript based utilitiy that you can install with npm 
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+  * npm install -g apidoc

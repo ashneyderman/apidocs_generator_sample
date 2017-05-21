@@ -7,8 +7,8 @@ defmodule ApidocsGeneratorSample.SimpleController do
   This method is here to examplify multi-line
   description. Just to annoy you slightly.
 
-  @apiParam {String} dry_run Required parameter
-  @apiParam {String} zip Required parameter 2
+  @apiParam (Query Parameters) {String} dry_run Required parameter
+  @apiParam (Query Parameters) {String} [zip] Optional parameter
   @apiVersion 2.0.1
   """
   def index(conn, params) do
@@ -27,7 +27,7 @@ defmodule ApidocsGeneratorSample.SimpleController do
   @doc """
   Post method
 
-  @apiParam {String} resp_type Response type to produce
+  @apiParam (Query Parameters) {String} resp_type Response type to produce
   """
   def post(conn, params) do
     resp_type = Map.get(params, "resp_type")
@@ -38,11 +38,11 @@ defmodule ApidocsGeneratorSample.SimpleController do
           |> put_status(:bad_request)
           |> json(%{ success: false,
                      message: "bad_request." })
-        "not_authorized" ->
+        "unauthorized" ->
           conn
-          |> put_status(:not_authorized)
+          |> put_status(:unauthorized)
           |> json(%{ success: false,
-                     message: "not_authorized." })
+                     message: "unauthorized." })
         "not_found" ->
           conn
           |> put_status(:not_found)
